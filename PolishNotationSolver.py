@@ -96,6 +96,9 @@ def solve_expression(expression):
             elif treated_expression[i] == '*':
                 container.push(a * b)
             elif treated_expression[i] == '/':
+                if b == 0:
+                    print('Division by zero', end = '')
+                    return
                 container.push(a / b)
         else:
             try:
@@ -124,6 +127,7 @@ exp7 = '10 20 + 30'
 exp8 = '54 312 + - 1'
 exp9 = '1 3 + 5 - a'
 exp10 = ' '
+exp11 = ' 1 0 /'
 
 
 print(' --> ' + str(solve_expression(exp1)))
@@ -136,5 +140,4 @@ print(' --> ' + str(solve_expression(exp7)))
 print(' --> ' + str(solve_expression(exp8)))
 print(' --> ' + str(solve_expression(exp9)))
 print(' --> ' + str(solve_expression(exp10)))
-
-
+print(' --> ' + str(solve_expression(exp11)))
