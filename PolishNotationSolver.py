@@ -76,13 +76,13 @@ def solve_expression(expression):
     # solves the expression
     for i in range(len(treated_expression)):
         if treated_expression[i] in operations:
-            # get the first element of the pile
+            # get the first element of the stack
             if not container.is_empty():
                 b = container.pop()
             else:
                 print('Not enough numbers before operator', end = '')
                 return
-            # get the second element of the pile
+            # get the second element of the stack
             if not container.is_empty():
                 a = container.pop()
             else:
